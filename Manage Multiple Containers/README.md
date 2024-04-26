@@ -11,20 +11,33 @@
 
 # Solution Manage Multiple Containers
 ## mysql:
+```bash
 - docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 - docker container logs db
+```
+
 
 ## webserver:
+```bash
 - docker container run -d --name webserver -p 8080:80 httpd
 - docker container logs webserver
+```
+
 
 ## nginx:
+```bash
 - docker container run -d --name proxy -p 80:80 nginx
 - docker container logs proxy
+```
+
 
 
 ## stop all container:
+```bash
 - docker container stop 29b3bafc7305 248d950bf097 df337857be86
+```
 
 ## remove all container:
+```bash
 - docker container rm 29b3bafc7305 248d950bf097 df337857be86
+```
