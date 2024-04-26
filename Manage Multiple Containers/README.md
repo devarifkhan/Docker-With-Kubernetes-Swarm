@@ -9,7 +9,7 @@
 - Clean it all up with `docker container stop` and `docker container rm` (both can accept multiple names or ID's)
 - Use `docker container ls` to ensure everything is correct before and after cleanup
 
-# Solution:
+# Solution Manage Multiple Containers
 ## mysql:
 - docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 - docker container logs db
